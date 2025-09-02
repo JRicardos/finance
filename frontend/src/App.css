@@ -1,0 +1,104 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap');
+
+body {
+  font-family: 'Inter', sans-serif;
+  background-color: #f1f5f9;
+}
+
+.sidebar {
+  transition: all 0.3s ease;
+  height: calc(100vh - 4rem);
+}
+
+.card {
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.progress-bar {
+  height: 8px;
+  border-radius: 4px;
+  overflow: hidden;
+}
+
+.progress-fill {
+  height: 100%;
+  transition: width 0.5s ease;
+}
+
+.animate-pulse-slow {
+  animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.fade-in {
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.tab-content {
+  display: none;
+}
+
+.tab-content.active {
+  display: block;
+}
+
+.sidebar-mobile {
+  position: fixed;
+  top: 4rem;
+  left: 0;
+  width: 100%;
+  height: calc(100vh - 4rem);
+  z-index: 40;
+  background-color: white;
+  box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+}
+
+.mobile-menu-button {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .mobile-menu-button {
+    display: block;
+  }
+  .sidebar {
+    display: none;
+  }
+  .sidebar.active {
+    display: block;
+  }
+}
+
+/* Cores customizadas */
+.text-primary-600 { color: #4f46e5; }
+.bg-primary-600 { background-color: #4f46e5; }
+.hover\:bg-primary-600:hover { background-color: #4f46e5; }
+.border-primary-600 { border-color: #4f46e5; }
+.focus\:border-primary-600:focus { border-color: #4f46e5; }
+.focus\:ring-primary-600:focus { --tw-ring-color: #4f46e5; }
+
+.text-success { color: #10b981; }
+.bg-success { background-color: #10b981; }
+.text-warning { color: #f59e0b; }
+.bg-warning { background-color: #f59e0b; }
+.text-danger { color: #ef4444; }
+.bg-danger { background-color: #ef4444; }
+.hover\:text-danger-dark:hover { color: #dc2626; }
+
+/* Classes utilitárias */
+.w-full { width: 100%; }
+.h-full { height: 100%; }
