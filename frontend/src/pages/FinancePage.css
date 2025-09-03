@@ -1,0 +1,476 @@
+.finance-page {
+  width: 100%;
+}
+
+.finance-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 2rem;
+}
+
+.finance-title {
+  margin: 0;
+}
+
+.finance-subtitle {
+  color: #6b7280;
+  font-size: 1rem;
+  margin: 0.25rem 0 0 0;
+}
+
+.finance-actions {
+  display: flex;
+  gap: 1rem;
+}
+
+.action-button {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1.25rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+/* Filters */
+.finance-filters {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  margin-bottom: 1.5rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+}
+
+.filters-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.filters-title {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.clear-filters {
+  font-size: 0.875rem;
+  color: #6b7280;
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  transition: color 0.2s;
+}
+
+.clear-filters:hover {
+  color: #1f2937;
+}
+
+.filters-content {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1rem;
+}
+
+.filter-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.filter-label {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #374151;
+}
+
+/* Summary Cards */
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.summary-card {
+  background: white;
+  border-radius: 0.75rem;
+  padding: 1.5rem;
+  text-align: center;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.summary-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+}
+
+.summary-icon {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.summary-title {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0 0 0.5rem 0;
+}
+
+.summary-value {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin: 0;
+}
+
+.summary-card.revenue .summary-icon {
+  color: var(--success);
+}
+
+.summary-card.revenue .summary-value {
+  color: var(--success);
+}
+
+.summary-card.expense .summary-icon {
+  color: var(--danger);
+}
+
+.summary-card.expense .summary-value {
+  color: var(--danger);
+}
+
+.summary-card.balance .summary-icon {
+  color: var(--primary-600);
+}
+
+.summary-card.balance .summary-value {
+  color: var(--primary-600);
+}
+
+/* Transactions Table */
+.transactions-container {
+  background: white;
+  border-radius: 0.75rem;
+  box-shadow: 0 1px 3px 0 rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.transactions-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1.5rem;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transactions-title {
+  margin: 0;
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: #1f2937;
+}
+
+.transactions-count {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+.transactions-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.transactions-table th,
+.transactions-table td {
+  padding: 1rem 1.5rem;
+  text-align: left;
+  white-space: nowrap;
+}
+
+.transactions-table th {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b7280;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.transactions-table td {
+  border-bottom: 1px solid #f3f4f6;
+}
+
+.transaction-description-cell {
+  min-width: 12rem;
+}
+
+.transaction-category-cell {
+  min-width: 8rem;
+}
+
+.transaction-date-cell {
+  min-width: 8rem;
+}
+
+.transaction-amount-cell {
+  min-width: 8rem;
+  text-align: right;
+}
+
+.transaction-description {
+  font-weight: 500;
+  color: #1f2937;
+  margin: 0 0 0.25rem 0;
+}
+
+.transaction-type {
+  font-size: 0.875rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+.category-tag {
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.category-personal {
+  background-color: #ede9fe;
+  color: #5b21b6;
+}
+
+.category-marketing {
+  background-color: #dbeafe;
+  color: #1e40af;
+}
+
+.category-infrastructure {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.category-operations {
+  background-color: #fef3c7;
+  color: #92400e;
+}
+
+.category-other {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.transaction-amount {
+  font-weight: 600;
+  text-align: right;
+}
+
+.amount-income {
+  color: var(--success);
+}
+
+.amount-expense {
+  color: var(--danger);
+}
+
+/* Pagination */
+.pagination {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem 1.5rem;
+  border-top: 1px solid #e5e7eb;
+  background-color: #f9fafb;
+}
+
+.pagination-info {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+.pagination-controls {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.pagination-button {
+  padding: 0.5rem 0.75rem;
+  border: 1px solid #d1d5db;
+  background: white;
+  color: #374151;
+  border-radius: 0.375rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.pagination-button:hover:not(:disabled) {
+  background-color: #f9fafb;
+}
+
+.pagination-button:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+
+.pagination-button.active {
+  background-color: var(--primary-600);
+  color: white;
+  border-color: var(--primary-600);
+}
+
+/* Empty State */
+.transactions-empty {
+  text-align: center;
+  padding: 4rem 2rem;
+  color: #6b7280;
+}
+
+.empty-icon {
+  font-size: 4rem;
+  margin-bottom: 1.5rem;
+  color: #d1d5db;
+}
+
+.empty-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1f2937;
+  margin-bottom: 0.5rem;
+}
+
+.empty-description {
+  font-size: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+/* Loading State */
+.transactions-loading {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+@keyframes pulse {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0.5; }
+}
+
+.transactions-loading th,
+.transactions-loading td {
+  background-color: #e5e7eb;
+  color: transparent;
+  border-radius: 0.25rem;
+}
+
+.transactions-loading .transaction-description {
+  height: 1rem;
+  width: 80%;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+  margin-bottom: 0.25rem;
+}
+
+.transactions-loading .transaction-type {
+  height: 0.75rem;
+  width: 60%;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+}
+
+.transactions-loading .category-tag {
+  height: 1.5rem;
+  width: 5rem;
+  background-color: #e5e7eb;
+  border-radius: 9999px;
+}
+
+.transactions-loading .transaction-date {
+  height: 1rem;
+  width: 6rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+}
+
+.transactions-loading .transaction-amount {
+  height: 1rem;
+  width: 5rem;
+  background-color: #e5e7eb;
+  border-radius: 0.25rem;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .finance-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .finance-actions {
+    width: 100%;
+    flex-direction: column;
+  }
+  
+  .action-button {
+    width: 100%;
+    justify-content: center;
+  }
+  
+  .finance-filters {
+    padding: 1rem;
+  }
+  
+  .filters-content {
+    grid-template-columns: 1fr;
+    gap: 0.75rem;
+  }
+  
+  .filters-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .summary-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .transactions-header {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 1rem;
+  }
+  
+  .transactions-table {
+    display: block;
+    overflow-x: auto;
+  }
+  
+  .transactions-table th,
+  .transactions-table td {
+    padding: 0.75rem 1rem;
+  }
+  
+  .pagination {
+    flex-direction: column;
+    gap: 1rem;
+    text-align: center;
+  }
+  
+  .pagination-controls {
+    order: -1;
+  }
+}
