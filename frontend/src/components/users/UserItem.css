@@ -1,0 +1,177 @@
+.user-item {
+  transition: background-color 0.2s;
+}
+
+.user-item:hover {
+  background-color: #f9fafb;
+}
+
+/* Células */
+.user-info-cell {
+  width: 25%;
+}
+
+.user-role-cell {
+  width: 15%;
+}
+
+.user-status-cell {
+  width: 15%;
+}
+
+.user-last-access-cell {
+  width: 20%;
+}
+
+.user-actions-cell {
+  width: 15%;
+}
+
+/* Informações do Usuário */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.user-avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.875rem;
+}
+
+.user-details {
+  flex: 1;
+}
+
+.user-name {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: #1f293b;
+  margin: 0 0 0.125rem 0;
+}
+
+.user-email {
+  font-size: 0.75rem;
+  color: #6b7280;
+  margin: 0;
+}
+
+/* Cargo */
+.user-role {
+  font-size: 0.875rem;
+  color: #374151;
+}
+
+/* Status */
+.user-status-cell {
+  text-align: center;
+}
+
+.status-tag {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.25rem 0.75rem;
+  border-radius: 9999px;
+  font-size: 0.75rem;
+  font-weight: 500;
+}
+
+.status-active {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-inactive {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+/* Último Acesso */
+.user-last-access {
+  font-size: 0.875rem;
+  color: #6b7280;
+}
+
+/* Ações */
+.user-actions {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 0.5rem;
+}
+
+.action-button {
+  width: 2rem;
+  height: 2rem;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 0.375rem;
+  border: none;
+  background: transparent;
+  color: #6b7280;
+  cursor: pointer;
+  transition: all 0.2s;
+}
+
+.action-button:hover {
+  background-color: #f3f4f6;
+  color: #1f293b;
+}
+
+.action-button.view:hover {
+  color: #4f46e5;
+}
+
+.action-button.edit:hover {
+  color: #4f46e5;
+}
+
+.action-button.delete:hover {
+  color: #ef4444;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .user-info {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.25rem;
+  }
+  
+  .user-details {
+    text-align: left;
+  }
+  
+  .user-name {
+    font-size: 0.875rem;
+  }
+  
+  .user-email {
+    font-size: 0.75rem;
+  }
+  
+  .user-role {
+    font-size: 0.875rem;
+  }
+  
+  .user-last-access {
+    font-size: 0.875rem;
+  }
+  
+  .user-actions {
+    justify-content: flex-end;
+  }
+  
+  .action-button {
+    width: 1.75rem;
+    height: 1.75rem;
+  }
+}
